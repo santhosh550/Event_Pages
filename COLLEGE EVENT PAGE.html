@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		/* Styling the body
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		/* Styling section, giving background
+			image and dimensions */
+		section {
+			width: 100%;
+			height: 100vh;
+			background:
+			background-size: cover;
+		}
+		/* Styling the left floating section */
+		section .leftBox {
+			width: 50%;
+			height: 100%;
+			float: left;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+		/* Styling the background of 
+			left floating section */
+		section .leftBox .content {
+			color: #fff;
+			background: rgba(0, 0, 0, 0.5);
+			padding: 40px;
+			transition: .5s;
+		}
+		/* Styling the hover effect 
+			of left floating section */
+		section .leftBox .content:hover {
+			background: linear-gradient(rgb(248, 3, 24),rgb(252, 2, 198));
+		}
+		/* Styling the header of left 
+			floating section */
+		section .leftBox .content h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 60px;
+			text-transform: uppercase;
+		}
+		/* Styling the paragraph of 
+			left floating section */
+		section .leftBox .content p {
+			margin: 10px 0 0;
+			padding: 0;
+		}
+		/* Styling the three events section */
+		section .events {
+			position: relative;
+			width: 50%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			float: right;
+			box-sizing: border-box;
+		}
+		/* Styling the links of 
+		the events section */
+		section .events ul {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+		/* Styling the lists of the event section */
+		section .events ul li {
+			list-style: none;
+			background: #fff;
+			box-sizing: border-box;
+			height: 200px;
+			margin: 15px 0;
+		}
+		/* Styling the time class of events section */
+		section .events ul li .time {
+			position: relative;
+			padding: 20px;
+			background: #262626;
+			box-sizing: border-box;
+			width: 30%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			transition: .5s;
+		}
+		/* Styling the hover effect
+			of events section */
+		section .events ul li:hover .time {
+			background: linear-gradient(rgb(51, 80, 240),rgb(63, 243, 63));
+		}
+		/* Styling the header of time 
+			class of events section */
+		section .events ul li .time h2 {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #ffffff ;
+			font-size: 60px;
+			line-height: 30px;
+		}
+		/* Styling the texts of time 
+		class of events section */
+		section .events ul li .time h2 span {
+			font-size: 28px;
+		}
+
+		/* Styling the details 
+		class of events section */
+		section .events ul li .details {
+			padding: 20px;
+			background: #fff;
+			box-sizing: border-box;
+			width: 70%;
+			height: 100%;
+			float: left;
+		}
+		/* Styling the header of the 
+		details class of events section */
+		section .events ul li .details h3 {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			font-size: 22px;
+		}
+		/* Styling the lists of details 
+		class of events section */
+		section .events ul li .details p {
+			position: relative;
+			margin: 10px 0 0;
+			padding: 0;
+			font-size: 16px;
+		}
+		/* Styling the links of details
+		class of events section */
+		section .events ul li .details a {
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px 15px;
+			border: 1.5px solid #262626;
+			margin-top: 8px;
+			font-size: 18px;
+			transition: .5s;
+		}
+		/* Styling the details class's hover effect */
+		section .events ul li .details a:hover {
+			background: #e91e63;
+			color: #fff;
+			border-color: #e91e63;
+		}
+		
+		.contact-text h4 {
+    color: var(--text-color);
+    margin: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+
+.contact-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.list {
+    margin-bottom: 2.8rem;
+
+}
+
+.list li {
+    margin-bottom: 12px;
+
+}
+
+.list li a {
+    display: block;
+    color: var(--second-color);
+    font-size: 14px;
+    transition: all .45s ease;
+}
+
+.list li a:hover {
+    color: var(--text-color);
+    transform: translateY(5px);
+
+}
+
+.contact-icons i {
+    height: 45px;
+    width: 45px;
+    color: var(--text-color);
+    font-size: 22px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 15px;
+    transition: all .45s ease;
+}
+
+.contact-icons i:hover {
+
+    color: var(--text-color);
+}
+
+.contact-form form {
+    position: relative;
+}
+
+.contact-form form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 240px;
+}
+
+.contact-form .submit {
+    display: inline-block;
+    font-size: 16px;
+    background: var(--main-color);
+    color: var(--text-color);
+    width: 160px;
+    transition: all .45s ease;
+}
+
+.contact-form .submit:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+	</style>
+</head>
+<h1><center>THIRU VI KA GOVERNMENT ARTS COLLEGE </center><BR><center>THIRUVARUR</center></h1><H1><span><CENTER>TECHNOVATION " 23 <span style='font-size: 50px;'>&#127881</span></CENTER></span></H1><br><h1><CENTER>DEPARTMENT OF COMPUTER SCIENCE...<span style='font-size: 50px;'>&#128187</span></h1></CENTER>
+<body>s
+	<section>
+		<div class="leftBox">
+			<div class="content">
+				
+				
+				<p><H1> WELCOME TO ALL MY STUDENTS AND STAFFS<BR></H1>
+					In Our Computer Science Department We Produdly Present<BR>
+					
+						An Intercollegiate Technical & Non-Technical Events For Computer Science Students...!<BR>We Conduct Three Days As A Festivel...<span style='font-size: 50px;'>&#128153</span>
+				</p>
+			</div>
+		</div>
+		<div class="events">
+			<ul>
+				<li>
+					<div class="time">
+						<h2>
+							01 <br><span>NOVEMBER</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							DAY 01
+						</h3>
+						<p>
+							IN DAY ONE WE CONDUCT PAPER PRESENTATION EVENT<BR>the purpose of a paper presentation is to exchange a particular student's ablity in art of academic writing or making papers in English and to present it.
+						</p>
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+				<li>
+					<div class="time">
+						<h2>
+							02 <br><span>NOVEMBER</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							DAY 02
+						</h3>
+						<p>
+							IN DAY TWO WE CONDUCT AD-ZAP EVENT<BR>It is an advertising event. So,the event consist of only one round. Topics will be given in on spot. The participants should convince the jury panel to buy their product.
+						</p>=
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+				<li>
+					<div class="time">
+						<h2>
+							03 <br><span>NOVEMBER</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							DAY 3
+						</h3>
+						<p>
+							IN DAY THREE WE CONDUCT WORD-CONNECT EVENT<BR>Word Connect is an exciting puzzle game for TRUE WORD geniuses! Find hidden words in mixed letters. It starts out very easy but gets challenging quickly. It even challenges the real word expert
+						</p>
+						<a href="#">View Details </a>
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+			</ul>
+		</div>
+	</section><br><br><br><br>
+	<!------------------Contact section------------>
+<section class="contact" id="contact">
+	<div class="contact-text">
+		<H1>Contact <span>Me!</span></h1>
+		<h3 class="text-center">For any doubt and enquiry click <span style='font-size: 50px;'>&#128073</span> <a href="https://thiruvikacollege.co.in/computerdept.php"> link</a>.</h3>
+		<div class="list">
+			
+		</div>
+	</div>
+
+</section>
+</body>
+</html>
